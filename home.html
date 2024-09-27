@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- main section start -->
+    <main>
+        <section class="flex justify-center items-center min-h-screen">
+            <div class="mockup-phone">
+                <div class="camera"></div>
+                <div class="display">
+                    <div class="artboard artboard-demo phone-1">
+                        <div class="sticky top-8 z-10">
+                            <section>
+                                <button id="sendMoney" class="btn bg-gradient-to-r from-sky-500 to-indigo-500 text-white">Send Money</button>
+                                <button id="cash-out" class="btn bg-gradient-to-r from-sky-500 to-indigo-500 text-white">Cash In</button>
+                                <button id="main-balance" class="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white">5000</button>
+                            </section>
+                            <section class="mt-2">
+                                <button id="history-btn" class="btn bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold w-full">History</button>
+                            </section>
+                        </div>
+
+                        <section id="cashout-section">
+                            <div class="hero bg-base-200">
+                                <div class="hero-content">
+                                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                                        <form class="card-body bg-sky-700 rounded-2xl">
+                                            <div class="form-control">
+                                                <label class="label">
+                                                    <span class="label-text text-white">Amount :</span>
+                                                </label>
+                                                <input id="input-ammount" type="text" placeholder="Amount" class="input input-bordered" required />
+                                            </div>
+                                            <div class="form-control">
+                                                <label class="label">
+                                                    <span class="label-text text-white">Pin Number :</span>
+                                                </label>
+                                                <input id="input-pin-cash-out" type="password" placeholder="Pin Number" class="input input-bordered" required />
+                                            </div>
+                                            <div class="form-control mt-6">
+                                                <button id="btn-cash-out" class="btn bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold">Cash In</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="sendMoney-section" class="hidden">
+                            <div class="hero bg-base-200">
+                                <div class="hero-content">
+                                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                                        <form class="card-body">
+                                            <div class="form-control">
+                                                <label class="label">
+                                                    <span class="label-text">Amount :</span>
+                                                </label>
+                                                <input id="input-ammounts" type="text" placeholder="Amount" class="input input-bordered" required />
+                                            </div>
+                                            <div class="form-control">
+                                                <label class="label">
+                                                    <span class="label-text">Pin Number :</span>
+                                                </label>
+                                                <input id="input-pin-send-money" type="password" placeholder="Pin Number" class="input input-bordered" required />
+                                            </div>
+                                            <div class="form-control mt-6">
+                                                <button id="sendmoney-btn" class="btn btn-primary text-white font-bold">Send Money</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                                <form method="dialog" class="modal-box flex justify-center py-20 items-center">
+                                    <div>
+                                        <h3 class="text-3xl lg:text-5xl font-bold text-center">Transaction</h3>
+                                        <div class="flex justify-center items-center gap-x-2 mt-3">
+                                            <img src="assets/coin.png" alt="">
+                                            <div id="modal-taka"></div>
+                                        </div>
+                                        <p class="font-semibold lg:text-xl text-center mt-3">Complete your Transaction</p>
+                                        <p class="mt-2 text-2xl text-center font-extrabold">Successfully</p>
+                                        <div class="text-center mt-4">
+                                            <button id="go-home-modal-btn" class="btn bg-gradient-to-r from-sky-500 to-indigo-500 font-medium text-white">Close Confirmation</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </dialog>
+                        </section>
+
+                        <section id="history-section" class="hidden overflow-x-hidden overflow-y-scroll mt-8">
+                            <!-- History content will be appended here -->
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main section end -->
+
+    <!-- Place the script at the bottom to ensure DOM is loaded -->
+    <script src="home.js"></script>
+</body>
+
+</html>
+
+
+    
