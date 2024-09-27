@@ -18,7 +18,7 @@ document.getElementById('btn-login').addEventListener('click', function (event) 
     // Ensure the email and pin match the expected values
     if (inputemail === "digontosikder123@gmail.com" && inputpin === 1234) {
         // Change the URL to your desired path if needed
-        window.location.href = './banks/home.html';
+        window.location.href = '/banks/home.html';
     } else {
         alert('Invalid email or password');
     }
